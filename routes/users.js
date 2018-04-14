@@ -32,13 +32,15 @@ router.get('/login', function(req, res){
 // Registration inputs
 router.post('/register', function(req, res){
 	var name = req.body.name;
+	var lname = req.body.lname;
 	var email = req.body.email;
 	var username = req.body.username;
 	var password = req.body.password;
 	var password2 = req.body.password2;
 
 	// Validate entered information
-	req.checkBody('name', 'Name is required').notEmpty();
+	req.checkBody('name', 'Firstname is required').notEmpty();
+	req.checkBody('lname', 'Lastname is required').notEmpty();
 	req.checkBody('username', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
 	req.checkBody('password', 'Password is required').notEmpty();
@@ -53,6 +55,7 @@ router.post('/register', function(req, res){
 	} else {
 		var newUser = new User({
 			name: name,
+			lname: lname,
 			email:email,
 			username: username,
 			password: password
