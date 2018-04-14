@@ -29,7 +29,7 @@ body {
 
 .foxbrand {
   font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.1vmin;
@@ -99,23 +99,18 @@ p {
 #addbtnincome:hover {
   color: #fff;
     background-color: #F16F0C;
-    border-color: #F16F0C; /*set the color you want here*/
+    border-color: #F16F0C; 
 }
 
 #addbtnexpense:hover {
   color: #fff;
     background-color: #F16F0C;
-    border-color: #F16F0C; /*set the color you want here*/
+    border-color: #F16F0C; 
 }
 
 .bg { 
-    /* The image used */
-    background-image: url("/media/loginbg.jpg");
-
-    /* Full height */
+    background-image: linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)), url("/media/loginbg.jpg");
     height: 100%; 
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,8 +129,24 @@ p {
   max-width: 10rem;
 }
 
+.homelogo {
+  width: 30vmin;
+  height: auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+.homelogo {
+  display: none;
+}
+
+.print {
+  display: none;
+}
+}
+
 .knowledge {
-  background-image: url(/media/knowledge.jpg);
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(/media/knowledge.jpg);
   background-position: 0% 35%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,7 +154,7 @@ p {
 }
 
 .tools {
-  background-image: url(/media/tools.jpg);
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(/media/tools.jpg);
   background-position: 0% 27.5%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -151,7 +162,7 @@ p {
 }
 
 .support {
-  background-image: url(/media/support.jpg);
+  background-image: linear-gradient(0deg,rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url(/media/support.jpg);
   background-position: 0% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -172,6 +183,14 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   height: 15rem;
+}
+
+.wiki_article {
+  background-image: url('/media/wiki_article.jpg');
+  background-position: 0% 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20rem;
 }
 
 .logbox {
@@ -294,7 +313,6 @@ p {
   background:#fed024;
 }
 .show{
-  background:#2a2025;
   color:#fff;
 }
 .show h3{

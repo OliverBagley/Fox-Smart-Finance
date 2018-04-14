@@ -16,11 +16,12 @@ function calculate(){
 		total_expense += +$(this).val();
 	});
 
-	$('#total_in').html(total_in); 
-	$('#total_expense').html(total_expense); 
-	$('#total_all').html(total_in - total_expense); 
+	$('#total_in').html((total_in).toFixed(2)); 
+	$('#total_expense').html((total_expense).toFixed(2)); 
+	$('#total_all').html((total_in - total_expense).toFixed(2)); 
 
 	var total_all = total_in - total_expense;
+
 
 	if (total_all >= 0) {
 		$("#total_all_format").addClass("positive");
