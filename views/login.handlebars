@@ -1,0 +1,30 @@
+<div class="loginbg">
+	<div class="container h-100 framepad">
+		<div class="row h-100 justify-content-center align-items-center">
+			<div class="col m-auto logbox mb-0">
+				{{#if success_msg}}
+				<div class="alert alert-success modernalert">{{success_msg}}</div>
+				{{/if}}
+
+				{{#if error_msg}}
+				<div class="alert alert-danger modernalert">{{error_msg}}</div>
+				{{/if}}
+
+				{{#if error}}
+				<div class="alert alert-danger modernalert">{{error}}</div>
+				{{/if}}
+				<form method="post" action="/users/login" class="form-signin">
+					<div class="form-group">
+						
+						<input type="text" class="form-control mb-3 borderedge" name="username" placeholder="Email">
+						<input type="password" class="form-control borderedge" name="password" placeholder="Password">
+					</div>
+					<button type="submit" class="btn loginbtn">Login</button>
+				</form>
+				<div class="row justify-content-center">
+						<p class="ml-3 mt-3 foot mb-0">Not registered? <a href="/users/register">Create an account</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

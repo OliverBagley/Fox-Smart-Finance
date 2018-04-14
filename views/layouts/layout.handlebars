@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fox - Smart Finance</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,300,600|Montserrat:100,200,300,400,500,900|PT+Serif" rel="stylesheet">
+
+</head>
+<body>
+	<body>
+
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top foxbackground upper">
+			<div class="container">
+				{{#if user}} <!-- If logged in then redirect to dashboard, or if not logged in go to home-->
+				<a class="navbar-brand foxbrand" href="/dashboard"><img src="/media/foxlogo.svg" width="30" height="30" class="d-inline-block align-top mr-3" alt=""><div class="foxbrand-strong">Fox</div>Smart Finance</a>
+				{{else}}
+				<a class="navbar-brand foxbrand" href="/dashboard"><img src="/media/foxlogo.svg" width="30" height="30" class="d-inline-block align-top mr-3" alt=""><div class="foxbrand-strong">Fox</div>Smart Finance</a>
+				{{/if}}
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartoggle" aria-controls="navbartoggle" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbartoggle">
+					<ul class="navbar-nav ml-auto">
+						{{#if user}}
+						<li class="nav-item active"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/budget">Budget</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/wiki">Wiki</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/users/logout">Logout</a></li>
+						{{else}}
+						<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item active"><a class="nav-link font-weight-bold" href="/users/login">Login</a></li>
+						<li class="nav-item active"><a class="nav-link font-weight-bold" href="/users/register">Register</a></li>
+						{{/if}}
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</body>
+</div>
+
+<main role="main">
+
+	{{{body}}}
+
+</main>
+
+<footer class="container">
+	<hr>
+	<p class="foot">&copy; Fox Smart Finance 2018</p>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="/js/bootstrap.js"></script>
+
+
+</body>
+</html>

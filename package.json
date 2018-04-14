@@ -1,0 +1,38 @@
+{
+  "name": "fox",
+  "version": "1.0.0",
+  "description": "smart finance web application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fox",
+    "finance",
+    "smart",
+    "finance"
+  ],
+  "author": "Oliver Bagley",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "^1.15.6",
+    "express-validator": "*",
+    "flash": "^1.1.0",
+    "inputmask": "^3.3.11",
+    "moment": "^2.22.0",
+    "mongodb": "*",
+    "mongoose": "*",
+    "octicons": "^7.2.0",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

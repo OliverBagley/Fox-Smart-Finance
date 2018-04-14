@@ -1,0 +1,87 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/js/budgetcalc.js"></script>
+
+<div class="container mt-4">
+	<div class="row">
+		<div class="col-lg-8">
+			<h2 class="montserratfont text-uppercase"><strong>Monthly Budget Calculator</strong></h2>
+		</div>
+		<div class="col-sm-4 text-lg-right">
+			<input class="btn-sm btn-outline-secondary" type="submit" value="Save">
+			<input class="btn-sm btn-outline-secondary" type="submit" onclick="window.print();return false;" value="Print Budget">
+		</div>
+	</div>
+
+
+	<div id="graph_section" style="background-color: #efefef; border-radius: 1vmin;"">
+		<div id="graph_set" style="display: none;">
+			<div class="row">
+				<div class="col-md-6 text-md-center">
+					<h5 class="m-3">Total Income <strong>£<span id="total_in"></span></strong></h5>
+					<div id="chart_div_income" style="width: 100%; height: 30vmin;">
+					</div>
+				</div>
+				<div class="col-md-6 text-md-center">
+					<h5 class="m-3">Total Expenditure <strong>£<span id="total_expense"></span></strong></h5>
+					<div id="chart_div_expense" style="width: 100%; height: 30vmin;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 text-md-center p-4" id="prompt">
+			<h5>Enter some values below to generate budget graphs</h5>
+		</div>
+		<div class="col-md-12 text-md-center p-4" id="total" style="display: none;">
+			<h5 class="m-3">Total income after expenses</h5>
+			<h3><span id="total_all_format" class="montserratfont totalallstyle"><strong>£<span id="total_all"></span></strong></span></h3>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-6 mt-4">
+			<form>
+			<h4 class="mb-0"><strong>Income</strong></h4>
+			<h6 class="mt-0"><small>Click to edit income values</small></h6>
+
+			<div id="income">
+				<div class="alert alert-warning mt-3 mb-3 text-md-center" id="warnincome" style="width: 100%; display: none;">
+					<strong>Maximum number of incomes entered</strong><br><small>Click below to edit an existing entry</small>
+				</div>
+				<div class="row"><div class="col-sm-6"><h6 class="font-weight-bold">Description</h6></div><div class="col-sm-6 text-right"><h6 class="font-weight-bold">Ammount</h6></div></div>
+				<div class="input-group">
+					<input type="text" class="form-control incomename" placeholder="Descripton">
+					<input type="number" class="form-control ammount incomeinput inputright" id='income_1' aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Amount">
+					<div class="input-group-append">
+						<button id="addbtnincome" class="btn btn-outline-secondary" onClick="addincome('income');" type="button">Add</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+
+		<div class="col-md-6 mt-4">
+			<form id="expense">
+			<h4 class="mb-0"><strong>Expenditure</strong></h4>
+			<h6 class="mt-0"><small>Click to edit expenditure values</small></h6>
+
+
+			<div id="expense">
+				<div class="alert alert-warning mt-3 mb-3 text-md-center" id="warnexpense" style="width: 100%; display: none;">
+					<strong>Maximum number of expenses entered</strong><br><small>Click below to edit an existing entry</small>
+				</div>
+				<div class="row"><div class="col-sm-6"><h6 class="font-weight-bold">Description</h6></div><div class="col-sm-6 text-right"><h6 class="font-weight-bold">Ammount</h6></div></div>
+				<div class="input-group">
+					<input type="text" class="form-control expensename" placeholder="Descripton">
+					<input type="number" class="form-control expenseinput" id='expense_1' aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Amount">
+					<div class="input-group-append">
+						<button id="addbtnexpense" class="btn btn-outline-secondary" onClick="addexpense('expense');" type="button">Add</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>
+
+
